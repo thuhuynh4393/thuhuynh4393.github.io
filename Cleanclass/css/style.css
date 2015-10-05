@@ -1,0 +1,152 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 4, 2015, 1:24:09 PM
+    Author     : Samsung
+*/
+body{
+    background-color: #fbf5ea;
+    font-family: Myriad Pro;
+}
+
+#clean-class{
+    margin: 0 auto;
+    width: 1020px;
+    height: 1200px;
+    
+}
+/*-----------------------------TOP-------------------------------------------*/
+#clean-class .top{
+    background: url(../img/header-bg.jpg) left top repeat-x;
+    height: 66px;   
+    
+}
+
+#clean-class .top .logo{
+    float: left;
+    margin:   19px 25px;
+    height: 43px;
+    
+}
+
+#clean-class .top .menu{
+    margin-left: 585px;
+}
+    #clean-class .top .menu ul{
+        
+    }
+    
+    #clean-class .top .menu ul li{
+        float: left;
+        margin: 19px 0 19px 24px;
+    }
+    
+    #clean-class .top .menu ul li a{
+        
+    }
+    
+    #clean-class .top .menu ul li span{
+    color: #abaaaa;
+    font-size: 15pt;
+    
+    
+    }
+/*-----------------------------INTRODUCE-------------------------------------------*/
+
+#clean-class .introduce{
+    background: url(../img/intro-bg.jpg) left top repeat;
+    height: 285px;
+    width: 1020px;
+    
+}
+#clean-class .introduce .col-left{
+    width: 345px;
+    height: 210px;
+    margin-left: 70px;
+    margin-top: 25px;
+    
+    float: left;
+}
+
+    #clean-class .introduce .col-left .title{
+        font-size: 24pt;
+        display: block;
+        opacity: 0.5;
+    }
+    
+    #clean-class .introduce .col-left .doc{
+        font-size: 10pt;
+        line-height: 30px;
+        opacity: 0.5;
+    }
+
+#clean-class .introduce .col-right{
+    width: 515px;
+    height: 250px;
+    margin-left: 460px;
+    background: url(../img/intro.jpg) right top no-repeat;
+    
+    
+}
+.doc{
+        font-size: 10pt;
+        line-height: 30px;
+        opacity: 0.5;
+    }
+    
+.title{
+        font-size: 24pt;
+        display: block;
+        opacity: 0.5;
+    }
+    
+/*------------------------------LINE------------------------------------------*/
+#clean-class .line{
+    height: 35px;
+    background: url(../img/intro-border.jpg) left top repeat-x;
+    
+    
+}
+
+/*--------------------------------CONteNT----------------------------------------*/
+.small-title{
+    display: block;
+}
+
+.content .doc #doc-cont{
+    border-bottom: black 1px;
+}
+.content .left{
+    width: 265px;
+    height: 580px;
+    margin-left: 42px;
+    
+    float: left;
+}
+
+.content .center{
+    width: 265px;
+    height: 595px;
+    margin-left: 65px;
+    
+    float: left;
+}
+
+.content .right{
+    width: 265px;
+    height: 595px;
+    margin-left: 700px;
+    margin-top: 35px;
+    
+    
+}
+
+.content .line-w{
+    border-top: 1px;
+    height: 1px;
+    background: black;
+}
+/*------------------------------------------------------------------------*/
