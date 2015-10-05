@@ -112,6 +112,9 @@ body{
 }
 
 /*--------------------------------CONteNT----------------------------------------*/
+.content{
+    height: 700px;
+}
 .small-title{
     display: block;
 }
@@ -143,15 +146,52 @@ body{
     
     
 }
-.content .right .block #arrow li{
-    list-style-image: url("img/arrow.png");
+
+.block{
+    
+    margin-top: 20px;
+    margin-bottom: 25px;
+    
+}
+
+.content .right .block#block-right{
+    margin-left: 25px;
+    margin-top: 20px;
     
     
 }
 
+.content .right .block #arrow li {
+    list-style-image: url("../img/arrow.jpg");
+    margin-top: 20px;
+    
+        
+    
+    
+}
 .content .line-w{
     border-top: 1px;
     height: 1px;
     background: black;
 }
-/*------------------------------------------------------------------------*/
+/*--------------------------------FOOTER----------------------------------------*/
+.footer{
+    height: 127px;
+    background: url('../img/footer.jpg') left top repeat-x;
+}
+
+.footer #left-footer{
+    margin-left: 60px;
+    padding-top: 25px;
+    margin-bottom: 25px;
+    float: left;
+}
+
+.footer .copyright{
+    margin-left: 635px;
+    height: 50px;
+    padding-top: 45px;
+}
+    .footer .copyright > img{
+    padding-left: 205px;
+    }
