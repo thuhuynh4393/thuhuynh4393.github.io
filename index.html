@@ -124,7 +124,7 @@ function render() {
   requestAnimationFrame(render);
 }
 //animation
-
+window.onload=function(){
 	var tl = new TimelineLite();
 	//open
 	tl.to("#open1",1,{alpha:1})
@@ -192,7 +192,7 @@ function render() {
 		.to("#open1",2,{background: "url(img/finishTuanloc.png)"})
 		.to(["#open1","#open2"],1,{left: 0});
 
-	
+	}
 	</script>
 
 </body>
