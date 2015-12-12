@@ -1,36 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<link rel="stylesheet" href="css.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js" charset="utf-8" async defer></script>
-	<title>Merry Christmas</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="xmas.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js" charset="utf-8" async defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.1/easing/EasePack.min.js" type="text/javascript" charset="utf-8" async defer></script>
+  <title>Merry Christmas</title>
 </head>
 <body>
-<div id="xmas">	
-	
-	<div id="t1" class="layer"></div>
-	<div id="t2" class="layer"></div>
-	<div id="t3" class="layer"></div>
-	<div id="t4" class="layer"></div>
-	<div id="t5" class="layer"></div>
-	<div id="t6" class="layer"></div>
-	<div id="t7" class="layer"></div>
-	<div id="t8" class="layer"></div>
-	<div id="t9" class="layer"></div>
-	<div id="t10" class="layer"></div>
-	<div id="t11" class="layer"></div>
-	<div id="t" class="layer"></div>
-	<div id="img-1" class="layer"></div>
-	<canvas id="canvas"></canvas>
+<div id="xmas"> 
+  
+  <div id="t1" class="layer"></div>
+  <div id="t2" class="layer"></div>
+  <div id="t3" class="layer"></div>
+  <div id="t4" class="layer"></div>
+  <div id="t5" class="layer"></div>
+  <div id="t6" class="layer"></div>
+  <div id="t7" class="layer"></div>
+  <div id="t8" class="layer"></div>
+  <div id="t9" class="layer"></div>
+  <div id="t10" class="layer"></div>
+  <div id="t11" class="layer"></div>
+  <div id="t" class="layer"></div>
+  <div id="img-1" class="layer"></div>
+  <div id="open1" class="layer"></div>
+  <div id="open2" class="layer"></div>
+  <canvas id="canvas"></canvas>
 </div>
+<p id="copy">Thu Huynh</p>
+<p id="copy">Snow effect: http://codepen.io/rlemon/pen/qhHIn</p>
+<p id="copy">Designed by freepik.com</p>
 <iframe id="music" src="http://mp3.zing.vn/embed/song/ZWZBZB7O?start=true" frameborder="0" allowfullscreen="true"></iframe>
 
 
-	<script type="text/javascript">
-	//snow
-		function Star(x, y, s /*radius*/ , p /*num points*/ ) {
+  <script type="text/javascript">
+  //snow Robert Lemon
+function Star(x, y, s /*radius*/ , p /*num points*/ ) {
   this.x = x;
   this.y = y;
   this.s = s;
@@ -116,39 +122,75 @@ function render() {
 }
 //animation
 window.onload=function(){
-	var tl = new TimelineLite();
-	//Frame 1
-	tl.to("#t1",1,{alpha: 1});
-	tl.to("#t2",1,{alpha: 1});
-	tl.to("#t3",1,{alpha: 1});
-	tl.to("#t4",1,{alpha: 1});
-	tl.to("#t5",1,{alpha: 1});
-	tl.to("#t6",1,{alpha: 1});
-	tl.to("#t7",1,{alpha: 1});
-	tl.to("#t8",1,{alpha: 1});
-	tl.to("#t9",1,{alpha: 1});
-	tl.to("#t10",1,{alpha: 1});
-	tl.to("#t11",1,{alpha: 1});
-	tl.to("#t",1,{alpha: 1});
-	tl.to("#img-1",10,{left: "150%",top: "-60%"});
-	//Frame 2
-	tl.to(["#t1","#t2","#t3","#t4","#t5","#t6","#t7","#t8","#t9","#t10","#t11","#t"],1,{alpha: 0});
+  var tl = new TimelineLite();
+  //open
+  tl.to("#open1",1,{alpha:1})
+    .to("#open2",1,{alpha:1},0)
+    .to("#open1",4,{left: "-690px"},4)
+    .to("#open2",4,{left: "670px"},4);
+  //Frame 1
+  tl.to("#t1",1,{alpha: 1})
+    .to("#t2",1,{alpha: 1})
+    .to("#t3",1,{alpha: 1})
+    .to("#t4",1,{alpha: 1})
+    .to("#t5",1,{alpha: 1})
+    .to("#t6",1,{alpha: 1})
+    .to("#t7",1,{alpha: 1})
+    .to("#t8",1,{alpha: 1})
+    .to("#t9",1,{alpha: 1})
+    .to("#t10",1,{alpha: 1})
+    .to("#t11",1,{alpha: 1})
+    .to("#t",1,{alpha: 1})
+    .to(["#t1","#t2","#t3","#t4","#t5","#t6","#t7","#t8","#t9","#t10","#t11"],0,{alpha:0})
+    .to("#t8",0,{background: "url(img/g3.png)",top: "-600px",alpha:1})
+    .to("#t9",0,{background: "url(img/g2.png)",top: "-600px",alpha:1})
+    .to("#t10",0,{background: "url(img/g1.png)",top: "-600px",alpha:1})
+    .to("#img-1",10,{left: "120%",top: "-40%"})
+    .to("#t8",1,{top: "0",ease: Bounce.easeOut},"-=6")
+    .to("#t9",1,{top: "0",ease: Bounce.easeOut},"-=4")
+    .to("#t10",1,{top: "0",ease: Bounce.easeOut},"-=3");
+  
+  tl.to(["#t8","#t9","#t10","#t11","#t"],1,{alpha: 0,delay: 4});
 
-	//Frame 3
-	tl.to("#xmas",1,{background: "url(img/f3_bg.png)"});
-	tl.to("#t1",1,{alpha: 1,background: "url(img/f3_snow.png)"});
-	tl.to("#t2",1,{alpha: 1,background: "url(img/f3_t_1.png)"});
-	tl.to("#t3",1,{alpha: 1,background: "url(img/f3_t_2.png)"});
-	tl.to("#t4",1,{alpha: 1,background: "url(img/f3_t_3.png)"});
-	tl.to("#t5",1,{alpha: 1,background: "url(img/f3_1.png)"});
-	tl.to("#t6",1,{alpha: 1,background: "url(img/f3_2.png)"});
-	tl.to("#t7",1,{alpha: 1,background: "url(img/f3_3.png)"});
-	tl.to(["#t1","#t2","#t3","#t4","#t5","#t6","#t7"],1,{alpha: 0});
-	tl.to("#t1",1,{alpha: 1,background: "url(img/f4.png) no-repeat",width: "1000%"});
-	tl.to("#t1",40,{left: "-500%"});
+  //Frame 3
+  tl.to("#xmas",1,{background: "url(img/f3_bg.png)",delay: 2})
+    .to("#t1",1.5,{alpha: 1,background: "url(img/f3_snow.png)"})
+    .to("#t2",1.5,{alpha: 1,background: "url(img/f3_t_1.png)",ease: Bounce.easeOut})
+    .to("#t3",1.5,{alpha: 1,background: "url(img/f3_t_2.png)",ease: Bounce.easeOut})
+    .to("#t4",1.5,{alpha: 1,background: "url(img/f3_t_3.png)",ease: Bounce.easeOut})
+    .to("#t5",1.5,{alpha: 1,background: "url(img/f3_1.png)",ease: Bounce.easeOut})
+    .to("#t6",1.5,{alpha: 1,background: "url(img/f3_2.png)",ease: Bounce.easeOut})
+    .to("#t7",1.5,{alpha: 1,background: "url(img/f3_3.png)",ease: Bounce.easeOut})
+    .to(["#t1","#t2","#t3","#t4","#t5","#t6","#t7"],1,{alpha: 0,delay: 4});
 
-	}
-	</script>
+  //Frame 4
+
+  tl.to("#xmas",1,{background: "url(img/f4_1.png)"})    
+    .to("#t2",0,{top: "-600px",background: "url(img/f4_g1.png)"})
+    .to("#t3",0,{top: "-600px",background: "url(img/f4_g2.png)"})
+    .to("#t4",0,{top: "-600px",background: "url(img/f4_g3.png)"})
+    .to("#t5",0,{top: "-600px",background: "url(img/f4_g4.png)"})
+    .to("#t6",0,{top: "-600px",background: "url(img/f4_g5.png)"})
+    .to("#t7",0,{top: "-600px",background: "url(img/f4_g6.png)"})
+    .to("#t8",0,{top: "-600px",background: "url(img/f4_g7.png)"})
+    .to("#t9",0,{top: "-600px",background: "url(img/f4_g8.png)"})
+
+    .to("#t2",1.5,{top: "0",alpha:1,background: "url(img/f4_g1.png)",ease: Bounce.easeOut})
+    .to("#t3",1.5,{top: "0",alpha:1,background: "url(img/f4_g2.png)",ease: Bounce.easeOut})
+    .to("#t4",1.5,{top: "0",alpha:1,background: "url(img/f4_g3.png)",ease: Bounce.easeOut})
+    .to("#t5",1.5,{top: "0",alpha:1,background: "url(img/f4_g4.png)",ease: Bounce.easeOut})
+    .to("#t6",1.5,{top: "0",alpha:1,background: "url(img/f4_g5.png)",ease: Bounce.easeOut})
+    .to("#t7",1.5,{top: "0",alpha:1,background: "url(img/f4_g6.png)",ease: Bounce.easeOut})
+    .to("#t8",1.5,{top: "0",alpha:1,background: "url(img/f4_g7.png)",ease: Bounce.easeOut})
+    .to("#t9",1.5,{top: "0",alpha:1,background: "url(img/f4_g8.png)",ease: Bounce.easeOut})
+    .to(["#t2","#t3","#t4","#t5","#t6","#t7","#t8","#t9"],1,{alpha: 0,delay: 4});
+  //change close
+  tl.to("#open2",2,{background: "url(img/finishSanta.png)"})
+    .to("#open1",2,{background: "url(img/finishTuanloc.png)"})
+    .to(["#open1","#open2"],1,{left: 0});
+
+  }
+  </script>
 
 </body>
 </html>
