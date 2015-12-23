@@ -181,14 +181,28 @@ window.onload=function(){
 		.to("#t8",0,{top: "-600px",background: "url(img/f4_g7.png)"})
 		.to("#t9",0,{top: "-600px",background: "url(img/f4_g8.png)"})
 
-		.to("#t2",1.5,{top: "0",alpha:1,background: "url(img/f4_g1.png)",ease: Bounce.easeOut})
-		.to("#t3",1.5,{top: "0",alpha:1,background: "url(img/f4_g2.png)",ease: Bounce.easeOut})
-		.to("#t4",1.5,{top: "0",alpha:1,background: "url(img/f4_g3.png)",ease: Bounce.easeOut})
-		.to("#t5",1.5,{top: "0",alpha:1,background: "url(img/f4_g4.png)",ease: Bounce.easeOut})
-		.to("#t6",1.5,{top: "0",alpha:1,background: "url(img/f4_g5.png)",ease: Bounce.easeOut})
-		.to("#t7",1.5,{top: "0",alpha:1,background: "url(img/f4_g6.png)",ease: Bounce.easeOut})
-		.to("#t8",1.5,{top: "0",alpha:1,background: "url(img/f4_g7.png)",ease: Bounce.easeOut})
-		.to("#t9",1.5,{top: "0",alpha:1,background: "url(img/f4_g8.png)",ease: Bounce.easeOut})
+		.to("#t2",1.5,{top: "0",alpha:1,ease: Bounce.easeOut})
+		.to("#t3",1.5,{top: "0",alpha:1,ease: Bounce.easeOut})
+		.to("#t4",1.5,{top: "0",alpha:1,ease: Bounce.easeOut})
+		.to("#t5",1.5,{top: "0",alpha:1,ease: Bounce.easeOut})
+		.to("#t6",1.5,{top: "0",alpha:1,ease: Bounce.easeOut})
+		.to("#t7",1.5,{top: "0",alpha:1,ease: Bounce.easeOut})
+		.to("#t8",1.5,{top: "0",alpha:1,ease: Bounce.easeOut})
+		.to("#t9",1.5,{top: "0",alpha:1,ease: Bounce.easeOut})
+		.to(["#t2","#t3","#t4","#t5","#t6","#t7","#t8","#t9"],1,{alpha: 0,delay: 4});
+		//frame 5
+	tl.to("#xmas",1,{background: "url(img/f5_bg.png)"})		
+		.to("#t2",0,{left: "600px",background: "url(img/f5_g1.png)"})
+		.to("#t3",0,{left: "-800px",background: "url(img/f5_g2.png)"})
+		.to("#t4",0,{left: "-800px",background: "url(img/f5_g3.png)"})
+		.to("#t5",0,{background: "url(img/f5_g4.png)"})
+		.to("#t6",0,{background: "url(img/f5_g5.png)"})
+
+		.to("#t2",1.5,{left: "0",alpha:1, ease: Sine.easeInOut})
+		.to("#t3",1.5,{left: "0",alpha:1, ease: Sine.easeInOut})
+		.to("#t4",1.5,{left: "0",alpha:1, ease: Sine.easeInOut})
+		.to("#t5",1.5,{alpha:1,ease: Bounce.easeOut})
+		.to("#t6",1.5,{alpha:1,ease: Bounce.easeOut})		
 		.to(["#t2","#t3","#t4","#t5","#t6","#t7","#t8","#t9"],1,{alpha: 0,delay: 4});
 	//change close
 	tl.to("#open2",2,{background: "url(img/finishSanta.png)"})
@@ -200,10 +214,7 @@ window.onload=function(){
 	restart.onclick = function(){
 		tl.restart();
 		}
-	/*tl.eventCallback("onComplete",replay);
-			function replay(){
-				tl.restart().delay(5);
-			}*/
+	
 	}
 
 	</script>
