@@ -3,6 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="css.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js" charset="utf-8" async defer></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.1/easing/EasePack.min.js" type="text/javascript" charset="utf-8" async defer></script>
@@ -25,8 +27,9 @@
 	<div id="t" class="layer"></div>
 	<div id="img-1" class="layer"></div>
 	<div id="open1" class="layer"></div>
-	<div id="open2" class="layer"></div>
+	<div id="open2" class="layer"></div>	
 	<canvas id="canvas"></canvas>
+	<i class="material-icons" id="replay" style="font-size:48px;color:red">replay</i>
 </div>
 <p id="copy">Thu Huynh</p>
 <p id="copy">Snow effect: http://codepen.io/rlemon/pen/qhHIn</p>
@@ -191,8 +194,18 @@ window.onload=function(){
 	tl.to("#open2",2,{background: "url(img/finishSanta.png)"})
 		.to("#open1",2,{background: "url(img/finishTuanloc.png)"})
 		.to(["#open1","#open2"],1,{left: 0});
-
+	tl.to("#replay",1,{alpha: 1});
+		//repeat
+	var restart = document.getElementById("replay");
+	restart.onclick = function(){
+		tl.restart();
+		}
+	/*tl.eventCallback("onComplete",replay);
+			function replay(){
+				tl.restart().delay(5);
+			}*/
 	}
+
 	</script>
 
 </body>
