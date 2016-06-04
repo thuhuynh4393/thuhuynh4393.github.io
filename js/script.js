@@ -12,7 +12,10 @@ $('.slider').slick({
   focusOnSelect: true,
   prevArrow: $('.btn-pre'),
   nextArrow: $('.btn-next'),
-  autoplay: true
+  autoplay: true,
+  pauseOnHover: false,
+  arrows: true
+
 });
 
 
