@@ -13,8 +13,6 @@ $('.slider').slick({
   prevArrow: $('.btn-pre'),
   nextArrow: $('.btn-next'),
   autoplay: true,
-  pauseOnHover: false,
-  arrows: true
 
 });
 
