@@ -6,7 +6,7 @@
 //   });
 // });
 
-// $('a').smoothScroll();
+$('a').smoothScroll();
 $('.slider').slick({
   dots: true,
   focusOnSelect: true,
