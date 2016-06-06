@@ -216,6 +216,8 @@ section {
   background: #000;
   transition: all .25s ease;
 }
+
+
 .social li a:hover {
   background: #fed136;
 }
@@ -259,6 +261,9 @@ section {
   border-top-right-radius: 50%;
   border-bottom-left-radius: 50%;
   border-bottom-right-radius: 50%;
+}
+.slick-dots li.slick-active button{
+  background: #fed136;
 }
 .navbar-fixed-top {
   background: #000;
